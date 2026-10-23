@@ -7,6 +7,8 @@
     yearEl.textContent = new Date().getFullYear();
   }
 
+  var externalIcon = '<svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 11L11 1M11 1H4M11 1v7"/></svg>';
+
   // Turns a YouTube link into an embed URL, or returns null for other links
   function youtubeEmbed(url) {
     var match = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([\w-]{11})/);
@@ -36,7 +38,11 @@
         return `<li>${task}</li>`;
       }).join('');
 
-      var media = (project.videos || []).map(renderVideo).concat(
+      var links = (project.links || []).map(function (link) {
+        return `<a class="project-card__link" href="${link.url}" target="_blank" rel="noopener noreferrer">${link.label}${externalIcon}</a>`;
+      }).join('');
+
+      var media =(project.videos || []).map(renderVideo).concat(
         (project.images || []).map(function (src) {
           return `<a class="media__item" href="${src}" target="_blank" rel="noopener"><img src="${src}" alt="${project.name} screenshot" loading="lazy"></a>`;
         })
@@ -46,7 +52,8 @@
         <article class="project-card">
           <h3 class="project-card__name">${project.name}</h3>
           ${project.description ? `<p class="project-card__description">${project.description}</p>` : ''}
-          ${tasks ? `<ul class="project-card__tasks">${tasks}</ul>` : ''}
+          ${links ? `<div class="project-card__links">${links}</div>` : ''}
+          ${tasks ?`<ul class="project-card__tasks">${tasks}</ul>` : ''}
           ${media ? `<div class="media">${media}</div>` : ''}
         </article>
       `;
