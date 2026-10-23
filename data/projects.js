@@ -102,7 +102,7 @@ window.PROJECTS = [
     name: "Scribe",
     description: "A Unity-powered property visualization application for professionals, featuring interactive 2D/3D building layouts, real-time digital twins, automated zoning, and area calculations compliant with international measurement standards.",
     tasks: [
-      "Developed and maintained various features and systems for architectural visualization software, enhancing functionality, usability, and overall application performance.",
+      "Developed and maintained various features and systems for the architectural visualization software, enhancing functionality, usability, and overall application performance.",
       "Implemented a Notes feature allowing users to annotate architectural drawings and sketches.",
       "Developed a Notes Disclaimer system to provide additional documentation when exporting sketches.",
       "Streamlined user settings by removing unnecessary options and improving usability.",
