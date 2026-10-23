@@ -58,7 +58,7 @@ window.PROJECTS = [
     tasks: [
       "Assisting technical artists and other developers with integration of existing features, particularly ones that were mentioned in the Animals & Coins Adventure Game project. "
     ],
-    images: [],
+    images: ["images/projects/tiles1.png", "images/projects/tiles2.png"],
     videos: []
   },
   {
@@ -72,7 +72,7 @@ window.PROJECTS = [
       "Migrated the Island Level System from PlayFab to Nakama to support high-value numeric data, including values in the billions, while improving integration flexibility and reliability.",
       "Optimized the game's network system to resolve disconnection issues and implement reliable player reconnection functionality."
     ],
-    images: [],
+    images: ["images/projects/animals1.png", "images/projects/animals2.png"],
     videos: []
   },
   {
