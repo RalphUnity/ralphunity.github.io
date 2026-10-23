@@ -75,6 +75,26 @@
     });
   }
 
+  // Email button copies the address instead of opening a mail app
+  document.querySelectorAll('.copy-email').forEach(function (btn) {
+    var text = btn.querySelector('.copy-email__text');
+    // If copying is blocked, highlight the address so it can be copied by hand
+    function selectText() {
+      var range = document.createRange();
+      range.selectNodeContents(text);
+      var selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
+    btn.addEventListener('click', function () {
+      if (!navigator.clipboard) return selectText();
+      navigator.clipboard.writeText(btn.dataset.email).then(function () {
+        text.textContent = 'Copied!';
+        setTimeout(function () { text.textContent = btn.dataset.email; }, 1500);
+      }, selectText);
+    });
+  });
+
   renderProjects();
 
   // Fade project cards in as they scroll into view
