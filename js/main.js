@@ -76,4 +76,21 @@
   }
 
   renderProjects();
+
+  // Fade project cards in as they scroll into view
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal--in');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -10% 0px' });
+
+    document.querySelectorAll('.project-card').forEach(function (card) {
+      card.classList.add('reveal');
+      revealObserver.observe(card);
+    });
+  }
 })();
