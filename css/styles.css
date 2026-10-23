@@ -396,6 +396,59 @@ main {
   border: 0;
 }
 
+/* Animations — intro fades up on load, project cards fade up as they scroll into view */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero__photo,
+.hero__greeting,
+.hero__title,
+.hero__subtitle,
+.hero__actions {
+  animation: fadeUp 0.6s ease both;
+}
+
+.hero__greeting { animation-delay: 0.05s; }
+.hero__title { animation-delay: 0.15s; }
+.hero__subtitle { animation-delay: 0.25s; }
+.hero__actions { animation-delay: 0.35s; }
+.hero__photo { animation-delay: 0.2s; }
+
+/* Added by JS only, so cards stay visible if the script doesn't run */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal--in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__photo,
+  .hero__greeting,
+  .hero__title,
+  .hero__subtitle,
+  .hero__actions {
+    animation: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--color-border);
