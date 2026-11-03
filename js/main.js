@@ -38,8 +38,8 @@
         return `<li>${item}</li>`;
       }).join('');
 
-      var skills = (project.skills || []).map(function (skill) {
-        return `<li>${skill}</li>`;
+      var tools = (project.tools || []).map(function (tool) {
+        return `<li>${tool}</li>`;
       }).join('');
 
       var links = (project.links || []).map(function (link) {
@@ -59,7 +59,7 @@
           ${project.description ? `<p class="project-card__description">${project.description}</p>` : ''}
           ${links ? `<div class="project-card__links">${links}</div>` : ''}
           ${responsibilities ? `<h4 class="project-card__heading">Responsibilities</h4><ul class="project-card__tasks">${responsibilities}</ul>` : ''}
-          ${skills ? `<h4 class="project-card__heading">Skills</h4><ul class="project-card__skills">${skills}</ul>` : ''}
+          ${tools ? `<h4 class="project-card__heading">Tools</h4><ul class="project-card__tools">${tools}</ul>` : ''}
           ${media ? `<div class="media">${media}</div>` : ''}
         </article>
       `;

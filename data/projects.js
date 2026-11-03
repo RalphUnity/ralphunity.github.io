@@ -6,7 +6,7 @@
  *   company     - the company you made it at, shown under the title (optional)
  *   description - one or two sentences about the project (optional)
  *   responsibilities - what you did on the project, one bullet per line
- *   skills      - tools and skills used, shown as tags, e.g. ["Unity", "C#", "PlayFab"]
+ *   tools       - tools and tech used, shown as tags, e.g. ["Unity", "C#", "PlayFab"]
  *   images      - image paths, e.g. "images/projects/my-game-1.png"
  *   videos      - .mp4 paths like "images/projects/demo.mp4",
  *                 or YouTube links like "https://www.youtube.com/watch?v=XXXXXXXXXXX"
@@ -34,7 +34,7 @@ window.PROJECTS = [
       "Managed JSON level data for stability and content scalability.",
       "Resolved client related UI bugs and integration issues"
     ],
-    skills: [ "Unity", "C#", "Docker", "Claude AI" ],
+    tools: [ "Unity", "C#", "Docker", "Claude AI" ],
     images: ["images/projects/panic1.png", "images/projects/panic2.png"],
     videos: [],
     links: [
@@ -51,7 +51,7 @@ window.PROJECTS = [
       "Led the migration from Unity to PhaserJS, including system conversion, asset integration, testing, and troubleshooting.",
       "Managed releases across Google Play, the App Store, and Skillz, including platform-specific builds and testing."
     ],
-    skills: [ "Unity", "C#", "PhaserJS", "JavaScript", "TypeScript", "Skillz" ],
+    tools: [ "Unity", "C#", "PhaserJS", "JavaScript", "TypeScript", "Skillz" ],
     images: ["images/projects/cats1.png"],
     videos: [],
     links: [
@@ -68,7 +68,7 @@ window.PROJECTS = [
       "Developed a math validator to ensure accurate calculations within the game.",
       "Developed a daily bonus wheel to reward players upon logging into the game."
     ],
-    skills: [ "Unity", "C#", , "Go", "Nakama", "Docker", "Jenkins" ],
+    tools: [ "Unity", "C#", "Go", "Nakama", "Docker", "Jenkins" ],
     images: ["images/projects/vegas1.png"],
     videos: [],
     links: [
@@ -83,7 +83,7 @@ window.PROJECTS = [
     responsibilities: [
       "Assisting technical artists and other developers with integration of existing features, particularly ones that were mentioned in the Animals & Coins Adventure Game project. "
     ],
-    skills: [ "Unity", "C#", "Go", "PlayFab", "Nakama", "Docker", "AWS", "Unity Cloud Build" ],
+    tools: [ "Unity", "C#", "Go", "PlayFab", "Nakama", "Docker", "AWS", "Unity Cloud Build" ],
     images: ["images/projects/tiles1.png", "images/projects/tiles2.png"],
     videos: [],
      links: [
@@ -102,7 +102,7 @@ window.PROJECTS = [
       "Migrated the Island Level System from PlayFab to Nakama to support high-value numeric data, including values in the billions, while improving integration flexibility and reliability.",
       "Optimized the game's network system to resolve disconnection issues and implement reliable player reconnection functionality."
     ],
-    skills: [ "Unity", "C#", "Go", "PlayFab", "Nakama", "Docker", "AWS", "Unity Cloud Build" ],
+    tools: [ "Unity", "C#", "Go", "PlayFab", "Nakama", "Docker", "AWS", "Unity Cloud Build" ],
     images: ["images/projects/animals1.png", "images/projects/animals2.png"],
     videos: [],
     links: [
@@ -121,7 +121,7 @@ window.PROJECTS = [
       "Streamlined user settings by removing unnecessary options and improving usability.",
       "Implemented and designed a tooltip system to improve feature discoverability and support future features."
     ],
-    skills: [ "Unity", "C#" ],
+    tools: [ "Unity", "C#" ],
     images: ["images/projects/scribe1.png", "images/projects/scribe2.png"],
     videos: [],
     links: [
@@ -138,7 +138,7 @@ window.PROJECTS = [
       "Developed and maintained PvP networking systems using Unity and Mirror.",
       "Optimized player controls and input handling to improve responsiveness and overall gameplay feel."
     ],
-    skills: [ "Unity", "C#", "Unity Cloud Build" ],
+    tools: [ "Unity", "C#", "Unity Cloud Build" ],
     images: [],
     videos: [],
     links: []
@@ -153,7 +153,7 @@ window.PROJECTS = [
       "Built backend services, APIs, and server-side functionality with AWS and Go.",
       "Integrated and adapted systems to meet project-specific requirements."
     ],
-    skills: [ "Unity", "C#", "Go", "PlayFab", "Nakama", "Docker", "AWS", "Unity Cloud Build" ],
+    tools: [ "Unity", "C#", "Go", "PlayFab", "Nakama", "Docker", "AWS", "Unity Cloud Build" ],
     images: [],
     videos: [],
     links: []

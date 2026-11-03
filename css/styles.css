@@ -375,7 +375,7 @@ button.hero__cta {
   margin: 0 0 var(--space-sm);
 }
 
-.project-card__skills {
+.project-card__tools {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -384,7 +384,7 @@ button.hero__cta {
   padding: 0;
 }
 
-.project-card__skills li {
+.project-card__tools li {
   font-size: 0.8125rem;
   font-weight: 600;
   padding: 0.25rem 0.75rem;
