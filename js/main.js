@@ -34,8 +34,12 @@
     }
 
     list.innerHTML = projects.map(function (project) {
-      var tasks = (project.tasks || []).map(function (task) {
-        return `<li>${task}</li>`;
+      var responsibilities = (project.responsibilities || []).map(function (item) {
+        return `<li>${item}</li>`;
+      }).join('');
+
+      var skills = (project.skills || []).map(function (skill) {
+        return `<li>${skill}</li>`;
       }).join('');
 
       var links = (project.links || []).map(function (link) {
@@ -51,9 +55,11 @@
       return `
         <article class="project-card">
           <h3 class="project-card__name">${project.name}</h3>
+          ${project.company ? `<p class="project-card__credit">${project.company}</p>` : ''}
           ${project.description ? `<p class="project-card__description">${project.description}</p>` : ''}
           ${links ? `<div class="project-card__links">${links}</div>` : ''}
-          ${tasks ?`<ul class="project-card__tasks">${tasks}</ul>` : ''}
+          ${responsibilities ? `<h4 class="project-card__heading">Responsibilities</h4><ul class="project-card__tasks">${responsibilities}</ul>` : ''}
+          ${skills ? `<h4 class="project-card__heading">Skills</h4><ul class="project-card__skills">${skills}</ul>` : ''}
           ${media ? `<div class="media">${media}</div>` : ''}
         </article>
       `;
